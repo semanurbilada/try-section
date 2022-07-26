@@ -7,3 +7,6 @@
 * Tasarlanan ortam; tarla, tarımsal araç(ika) ve yabani otlardan oluşmaktadır.
 
 * Tasarlanan ortamın fotoğrafı dosyada jpg uzantılı olarak mevcuttur.
+
+
+
