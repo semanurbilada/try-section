@@ -1,5 +1,5 @@
 /*   
-- kısa süreli bir unity projesi içindi
+- kısa süreli bir unity projesi için
 - vscode ile yazıldı (unity default)
 
 -> Unity'de tasarlanan ortamda;
