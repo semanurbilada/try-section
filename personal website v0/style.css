@@ -68,3 +68,10 @@ ul{
 .box li a:hover{
     color: rgb(48, 109, 163);
 }
+
+.box .author li{
+    display: block;
+    font-size: 17px;
+    user-select: none;
+    -webkit-user-select: none;
+}
