@@ -44,6 +44,8 @@ body{
     font-size: 20px;
     font-weight: 100;
     letter-spacing: 3px;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .box p{
