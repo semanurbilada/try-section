@@ -31,7 +31,6 @@ body{
     transform: scale(0.9); /*geçiş için*/
 }
 
-
 .box h1{
     font-size: 40px;
     font-weight: 100;
@@ -75,7 +74,6 @@ ul{
 .box li a:hover{
     color: rgb(48, 109, 163);
 }
-
 
 .box .author li{
     margin-top: 5%;
