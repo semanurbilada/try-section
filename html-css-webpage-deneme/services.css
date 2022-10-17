@@ -57,7 +57,7 @@
     background-color: rgb(203, 180, 76);
     border-radius: 2px;
 }
-/* ------------------------------------------------------------ (Hizmetlerimiz) */
+/* Hizmetlerimiz */
 .container .box{
     height: 350px;
     background: rgba(66, 86, 108, 0.4);
@@ -73,7 +73,7 @@
     width: center;
     text-align: center;
 }
-/*  ------------------------------------------------------------ (Created by section) */
+/* Copyright */
 .copyright li{
     text-align: center;
     font-size: 18px;
