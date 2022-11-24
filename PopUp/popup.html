@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up</title>
+
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!--font-awesome ikonlar-->
+</head>
+
+<body>
+    <div class="box" id="pop-up">
+        <div class="title">
+            <i class="fa-solid fa-xmark" onclick="closePopup();"></i> 
+            <img src="astronout.jpg">
+            <p>Semanur Bilada'nın hesabından <br> Ben de İzliyorum'la kendini ekleyebilirsin</p>
+        </div>
+
+        <div class="buttons">
+            <button class="btn1">E-Posta</button>
+            <button class="btn2">Cep No</button>
+        </div>
+
+        <p>Cep Numarasını yazarak, kendini izleyici olarak ekleyebilirsin.</p>
+        <input class="input" type="number" placeholder="Cep Numarası">
+        <button class="btn3">Beni de Ekle</button>
+    </div>
+
+
+    <script>
+        function closePopup() {
+            var close = document.getElementById("pop-up");
+            close.classList.toggle("hidden");
+        }
+    </script>
+    
+</body>
+</html>
