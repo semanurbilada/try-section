@@ -6,6 +6,14 @@ body{
     font-family: Poppins;
 }
 
+:root{
+    --orange: rgb(255, 123, 0);
+    --lightorange: rgb(249, 227, 201);
+    --blue: rgb(6, 141, 186);
+    --btnblue: rgb(56 189 248);
+    --lightblue: rgb(151, 224, 248);
+}
+
 .box{
     position: relative;
     padding: 15px;
@@ -32,7 +40,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(249, 227, 201);
+    background-color: var(--lightorange);
     padding: 5px;
     border-radius: 20px;
     gap: 10px;
@@ -43,8 +51,8 @@ body{
     position: absolute;
     top: 30px;
     right: 30px;
-    background-color: rgb(151, 224, 248);
-    color: rgb(6, 141, 186);
+    background-color: var(--lightblue);
+    color: var(--blue);
     border-radius: 5px;
     width: 20px;
     padding: 7px;
@@ -82,12 +90,12 @@ body{
     border-width: 2px;
 }
 
-.btn1{
-    color: rgb(6, 141, 186);
+.buttons .btn1{
+    color: var(--btnblue);
 }
 
 .buttons .btn2{
-    background-color: rgb(56 189 248);
+    background-color: var(--btnblue);
     color: aliceblue;
 }
 
@@ -100,7 +108,7 @@ body{
     background-color: aliceblue;
     border-color: aliceblue;
     border-width: 2px;
-    color: rgb(6, 141, 186);
+    color: var(--btnblue);
 }
 
 .input{
