@@ -1,4 +1,4 @@
-# TEKNOFEST project for custom object detection, based on the YOLO model.
+# TEKNOFEST project for waypoints in mission planner program datas.
 # The code has been modified to suit the needs of this project.
 """
 © Copyright 2015-2016, 3D Robotics.
