@@ -1,9 +1,11 @@
-# try_section
+# Try Section
 
-This area includes some of examples that I'm trying now or in the backlog, in terms of small projects.
+Hey there! This is where I keep track of all the small projects and ideas I'm messing around with.
 
-Or it's the small tries and components for my bigger projects…!
+Some of them are just little pieces of my projects that I'm using to learn new skills or try new technologies.
 
-Also, I'm using here as reminding area for the project components that I assembled from other projects!
+This section is also my go-to spot for remembering project components that I've assembled from other projects.
 
-So, it's still updating!
+It's a work-in-progress, so I'm always updating with new ideas.
+
+Thanks for stopping by, and feel free to check out what I'm working on!
