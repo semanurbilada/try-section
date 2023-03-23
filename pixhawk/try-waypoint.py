@@ -1,6 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
+# TEKNOFEST project for custom object detection, based on the YOLO model.
+# The code has been modified to suit the needs of this project.
 """
 © Copyright 2015-2016, 3D Robotics.
 mission_basic.py: Example demonstrating basic mission operations including creating, clearing and monitoring missions.
