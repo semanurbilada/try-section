@@ -1,4 +1,4 @@
-# TEKNOFEST project for custom object detection, based on the YOLO model.
+# TEKNOFEST project for real-time custom object detection, based on the YOLO model.
 # The code has been modified to suit the needs of this project.
 import cv2
 import numpy as np

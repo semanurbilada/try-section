@@ -6,16 +6,14 @@
 - tarımsal aracı (İKA) tarlada hareket ettirmek için,
 - ve bitkiyi (yabani otu), araç hareket ettikçe tarlaya eklemesi için.
 */
+//hatayı çözmek için eklendi
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//hatayı çözmek için eklendi
-using.System;
-
 public class creatingObjects : MonoBehaviour
 {
-
     public Transform tarla;
     public GameObject yabani_ot;
 
@@ -25,6 +23,5 @@ public class creatingObjects : MonoBehaviour
         //Instantiate the gaming object (yabani ot)
         Instantiate(yabani_ot, tarla.position, tarla.rotation);
 
-    } //void start
-
-} //public class
+    } 
+} 
