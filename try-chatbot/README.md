@@ -24,6 +24,8 @@
 
 <br>
 
+#### The documentation link is [here!](https://realpython.com/build-a-chatbot-python-chatterbot/)
+
 #### gitignore content: venv is the virtual environment and db.sqlite3 is a sql database where it store all your inputs and possible responses.
 
 #### Warning: The 'nltk_data' folder is going to install to default location in your operating system when you run the chatbot because the library might download some data and language models.
