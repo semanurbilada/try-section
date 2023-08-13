@@ -1,11 +1,17 @@
-# Try Section
+<div align="center">
+<img src="https://cdn-icons-png.flaticon.com/512/8596/8596535.png" width="200" height="200" alt="spotify">
+</div>
 
-* Hey there! This is where I keep track of all the small projects and ideas I'm messing around with.
+<h1 align="center">Try Section</h1>
 
-* Some of them are just little pieces of my projects that I'm using to learn new skills or try new technologies.
+*  [:hash: Purpose](#hash-purpose)
 
-* This section is also my go-to spot for remembering project components that I've assembled from other projects.
+# :hash: Purpose
+<p align="justify">
 
-* It's a work-in-progress, so I'm always updating with new ideas.
+Hey there! This is where I keep track of all the small projects and ideas I'm messing around with. Some of them are just little parts of larger projects where I explore new skills and technologies.
 
-* Thanks for stopping by, and feel free to check out what I'm working on!
+This is also my go-to spot for archiving project components from different sources. I'm constantly adding new ideas and updates - it's a work in progress.
+
+Thanks for checking out what I'm up to!
+</p>
