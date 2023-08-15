@@ -1,26 +1,46 @@
 ## Scripts for Chatbot's setup 
 
 1. You can run, in the project directory;
-### `cd try-chatbot`
+```
+cd try-chatbot
+```
 
 <br>
 
 2. To create a virtual environment (Windows)
-### `python -m venv venv`
-### `venv\Scripts\activate`
-### `python -m pip install chatterbot==1.0.4 pytz`
+```
+python -m venv venv
+```
+```
+venv\Scripts\activate
+```
+```
+python -m pip install chatterbot==1.0.4 pytz
+```
 
 <br>
 
 2. To create a virtual environment (Linux / MacOS)
-### `python -m venv venv`
-### `source venv/bin/activate`
-### `python -m pip install chatterbot==1.0.4 pytz`
+```
+python -m venv venv
+```
+```
+source venv/bin/activate
+```
+```
+python -m pip install chatterbot==1.0.4 pytz
+```
 
 <br>
 
 3. To run the chatbot;
-### `python bot.py`
+```
+python bot.py
+
+#or
+
+python3 bot.py
+```
 
 <br>
 
