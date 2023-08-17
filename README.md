@@ -13,4 +13,4 @@ Hey there! This is where I keep track of all the small projects and ideas I'm me
 
 This is also my go-to spot for archiving project components from different sources. I'm constantly adding new ideas and updates - it's a work in progress.
 
-Thanks for checking out what I'm up to!
+Feel free to explore and provide any feedback you might have. Learning is a journey, and I'm excited to share mine with you!
