@@ -36,12 +36,12 @@ if response.status_code == 200:
                     text_content = word_section_div.get_text()
                     print(text_content)
                 else:
-                    print("WordSection div not found inside the iframe.")
+                    print("Div not found inside the iframe.")
             else:
-                print(f"Failed to retrieve content from iframe. Status code: {iframe_response.status_code}")
+                print(f"Failed to get content from iframe. Status code: {iframe_response.status_code}")
         else:
             print("src attribute not found in the iframe.")
     else:
         print("Iframe not found on the main page.")
 else:
-    print(f"Failed to retrieve main page. Status code: {response.status_code}")
+    print(f"Failed to get main page. Status code: {response.status_code}")
