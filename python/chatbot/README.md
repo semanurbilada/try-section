@@ -2,7 +2,7 @@
 
 1. You can run, in the project directory;
 ```
-cd try-chatbot
+cd chatbot
 ```
 
 <br>
@@ -36,9 +36,10 @@ python -m pip install chatterbot==1.0.4 pytz
 3. To run the chatbot;
 ```
 python bot.py
+```
+or
 
-#or
-
+```
 python3 bot.py
 ```
 
