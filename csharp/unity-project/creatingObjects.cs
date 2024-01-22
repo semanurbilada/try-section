@@ -1,5 +1,5 @@
 /*   
-- kısa süreli bir unity projesi için
+- kısa süreli bir unity projesi için (templeate)
 - vscode ile yazıldı (unity default)
 
 -> Unity'de tasarlanan ortamda;
