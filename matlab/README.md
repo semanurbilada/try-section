@@ -11,7 +11,11 @@ The system developed on MATLAB is trained to accurately classify tumors by proce
 
 Since I want to learn the Simulink and CNN in MATLAB for other projects, I adapt the requirements of this project to my own learning needs. I hope I've demonstrated my desire to learn with this part of the project.
 
+<div align="center">
+
 ![Screenshot 2024-02-25 at 1 37 24 AM](https://github.com/semanurbilada/try-section/assets/96194982/b2346a59-775d-4851-8863-7545a7d025e0)
 
 
 ![Screenshot 2024-02-25 at 1 37 33 AM](https://github.com/semanurbilada/try-section/assets/96194982/7cfe4422-11c1-4407-a488-042533b512d1)
+
+</div>
