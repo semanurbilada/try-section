@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://cdn-icons-png.flaticon.com/512/9304/9304432.png" width="100" height=100" alt="icon">
+<img src="https://cdn-icons-png.flaticon.com/512/9304/9304432.png" width="150" height=150" alt="icon">
 </div>
 
 <h2 align="center">Brain Tumor Detection Using MRI Images With CNN In MATLAB</h1>
