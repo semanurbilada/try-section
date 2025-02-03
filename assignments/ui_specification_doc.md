@@ -1,4 +1,4 @@
-# User Interface Specification Document
+# Document of the User Interface (UI) Specification
 
 * [Overview](#overview)
 * [Requirements](#requirements)
@@ -10,7 +10,7 @@
 * [Notes](#notes)
 
 ## Overview
-This document specifies the user interface for the User Management Screen. It outlines UI components, user interactions, and behavior to guide software developers in implementing the interface.
+This document specifies The User Interface (UI) for the User Management Screen. It outlines UI components, user interactions and behavior to guide software developers in implementing the interface.
 
 ## Requirements
 - The user should be able to view a list of existing users.
@@ -24,11 +24,11 @@ This document specifies the user interface for the User Management Screen. It ou
 
 ### 1. User List Table
 | Column Name  | Description |
-|-------------|-------------|
-| ID          | Unique identifier for the user |
-| User Name   | The username of the user |
-| Email       | Email address of the user |
-| Enabled     | Indicates if the user is active (true/false) |
+|--------------|-------------|
+| ID           | Unique identifier for the user |
+| Username     | The username of the user |
+| Email        | Email address of the user |
+| Enabled      | Indicates if the user is active (true/false) |
 
 - **Sorting & Filtering**: Each column header allows sorting and filtering.
 - **Hiding Disabled Users**: A checkbox labeled *Hide Disabled User* enables/disables the display of disabled users.
@@ -62,5 +62,3 @@ The form includes the following input fields:
 ## Notes
 - Validation should ensure unique usernames and valid email formats.
 - The UI should follow responsive design principles.
-
-<!-- TODO: Edits for the minor details; last version! -->
