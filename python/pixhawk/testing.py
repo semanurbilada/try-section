@@ -1,9 +1,10 @@
-from pymavlink import mavutil
+# TODO: Testing results?
 import time
+from pymavlink import mavutil
 
 master = mavutil.mavlink_connection('/dev/ttyTHS1', baud=115200)
-
 print("Waiting for heartbeat...")
+
 master.wait_heartbeat()
 print("Heartbeat received!")
 
