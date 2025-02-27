@@ -2,20 +2,22 @@ import math
 import pygame
 from queue import PriorityQueue
 
+# Window settings
 WIDTH = 800
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
 pygame.display.set_caption("A* Path Finding Algorithm")
 
+# Colors
 RED = (255, 0, 0) # already visited
-GREEN = (0, 255, 0)
+GREEN = (0, 255, 0) # open set
 BLUE = (0, 255, 0)
 YELLOW = (255, 255, 0)
-WHITE = (255, 255, 255) # square: not looked at, could be visited
-BLACK = (0, 0, 0) # barrier: should be avoid
-PURPLE = (128, 0, 128) # path
+WHITE = (255, 255, 255) # not yet visited
+BLACK = (0, 0, 0) # barrier, obstacle
+PURPLE = (128, 0, 128) # final path
 ORANGE = (255, 165, 0) # start Node
-GREY = (128, 128, 128)
-TURQUOISE = (64, 224, 208)
+GREY = (128, 128, 128) # grid lines
+TURQUOISE = (64, 224, 208) # end Node
 
 # class Node:
 class Spot:
@@ -48,25 +50,25 @@ class Spot:
         return self.color == TURQUOISE
     
     def reset(self):
-        return self.color == WHITE
+        self.color = WHITE
     
     def make_closed(self):
-        return self.color == RED
+        self.color = RED
     
     def make_open(self):
-        return self.color == GREEN
+        self.color = GREEN
     
     def make_barrier(self):
-        return self.color == BLACK
+        self.color = BLACK
     
     def make_start(self):
-        return self.color == ORANGE
+        self.color = ORANGE
     
     def make_end(self):
-        return self.color == TURQUOISE
+        self.color = TURQUOISE
     
     def make_path(self):
-        return self.color == PURPLE
+        self.color = PURPLE
     
     def draw(self, win):
         pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.width))
@@ -79,6 +81,7 @@ class Spot:
     
     print("Class done!\n")
 
+# Heuristic Search func
 def h(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
@@ -88,7 +91,7 @@ print("Func h done!\n")
 
 def make_grid(rows, width):
     grid = []
-    gap = width // rows
+    gap = width // rows # width of each cell
     for i in range(rows):
         grid.append([])
         for j in range(rows):
@@ -101,9 +104,9 @@ print("Func make grid done!\n")
 def draw_grid(win, rows, width):
     gap = width // rows
     for i in range(rows):
-        pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap))
+        pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap)) # horizontal lines
         for j in range(rows):
-            pygame.draw.line(win, GREY, (j * gap, 0), (j * gap, width))
+            pygame.draw.line(win, GREY, (j * gap, 0), (j * gap, width)) # vertical lines
     # # Alternative
     # for i in range(rows):
     #     pygame.draw.line(win, GREY, (i * gap, 0), (i * gap, width))
@@ -149,7 +152,7 @@ def main(win, width):
             if started:
                 continue
 
-            if pygame.mouse.get_pressed()[0]: # left mouse button
+            if pygame.mouse.get_pressed()[0]: # left-clicked
                 pos = pygame.mouse.get_pos()
                 row, col = get_clicked_pos(pos, ROWS, width)
                 spot = grid[row][col]
@@ -164,9 +167,9 @@ def main(win, width):
                 elif spot != end and spot != start:
                     spot.make_barrier()
             
-            elif pygame.mouse.get_pressed()[2]: # right mouse button
+            elif pygame.mouse.get_pressed()[2]: # right-clicked (reset node)
                 pass
-            
+
     pygame.quit()
 
 main(WIN, WIDTH)
