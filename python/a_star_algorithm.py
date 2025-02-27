@@ -59,8 +59,8 @@ class Spot:
     def make_barrier(self):
         return self.color == BLACK
     
-    # def make_start(self):
-    #     return self.color == ORANGE
+    def make_start(self):
+        return self.color == ORANGE
     
     def make_end(self):
         return self.color == TURQUOISE
@@ -76,13 +76,97 @@ class Spot:
 
     def __lt__(self, other):
         return False
+    
+    print("Class done!\n")
 
 def h(p1, p2):
-    pass 
+    x1, y1 = p1
+    x2, y2 = p2
+    p2 = (1,9)
+    return abs(x1 - x2) + abs(y1 - y2)
+print("Func h done!\n")
 
-# # This draw_grid will take less time to execute
-# def draw_grid(win, rows, width):
-# 	gap = width // rows
-# 	for i in range(rows):
-# 		pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap))
-# 		pygame.draw.line(win, GREY, (i * gap, 0), (i * gap, width))
+def make_grid(rows, width):
+    grid = []
+    gap = width // rows
+    for i in range(rows):
+        grid.append([])
+        for j in range(rows):
+            spot = Spot(i, j, gap, rows)
+            grid[i].append(spot)
+
+    return grid
+print("Func make grid done!\n")
+
+def draw_grid(win, rows, width):
+    gap = width // rows
+    for i in range(rows):
+        pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap))
+        for j in range(rows):
+            pygame.draw.line(win, GREY, (j * gap, 0), (j * gap, width))
+    # # Alternative
+    # for i in range(rows):
+    #     pygame.draw.line(win, GREY, (i * gap, 0), (i * gap, width))
+    #     pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap))
+print("Func draw grid done!\n")
+
+def draw(win, grid, rows, width):
+    win.fill(WHITE)
+
+    for row in grid:
+        for spot in row:
+            spot.draw(win)
+
+    draw_grid(win, rows, width)
+    pygame.display.update()
+print("Func draw done!\n")
+
+def get_clicked_pos(pos, rows, width):
+    gap = width // rows
+    y, x = pos
+    
+    row = y // gap
+    col = x // gap
+    return row, col
+print("Func get clicked pos done!\n")
+
+def main(win, width):
+    ROWS = 50
+    grid = make_grid(ROWS, width)
+
+    start = None
+    end = None
+
+    run = True
+    started = False
+    while run:
+        draw(win, grid, ROWS, width)
+        print("Draw?!\n")
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+
+            if started:
+                continue
+
+            if pygame.mouse.get_pressed()[0]: # left mouse button
+                pos = pygame.mouse.get_pos()
+                row, col = get_clicked_pos(pos, ROWS, width)
+                spot = grid[row][col]
+                if not start:
+                    start = spot
+                    start.make_start()
+
+                elif not end:
+                    end = spot
+                    end.make_end()
+
+                elif spot != end and spot != start:
+                    spot.make_barrier()
+            
+            elif pygame.mouse.get_pressed()[2]: # right mouse button
+                pass
+            
+    pygame.quit()
+
+main(WIN, WIDTH)
