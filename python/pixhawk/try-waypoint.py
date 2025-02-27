@@ -5,12 +5,11 @@
 mission_basic.py: Example demonstrating basic mission operations including creating, clearing and monitoring missions.
 Full documentation is provided at http://python.dronekit.io/examples/mission_basic.html
 """
-from __future__ import print_function
-
-from dronekit import connect, Vehicle_İKAMode, LocationGlobalRelative, LocationGlobal, Command
-import time
 import math
+import time
 from pymavlink import mavutil
+from __future__ import print_function
+from dronekit import connect, Vehicle_İKAMode, LocationGlobalRelative, LocationGlobal, Command
 
 
 #Set up option parsing to get connection string

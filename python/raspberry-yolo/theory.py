@@ -10,9 +10,9 @@
 import cv2
 import time
 import logging
+import pyshine as ps  # pip3 install pyshine==0.0.9
 from style import HTML
 from ultralytics import YOLO
-import pyshine as ps  # pip3 install pyshine==0.0.9
 
 def main(server_ip='172.20.10.2', port=9000):
     StreamProps = ps.StreamProps

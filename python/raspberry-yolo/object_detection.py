@@ -1,9 +1,9 @@
 # TEKNOFEST project for custom object detection, based on the YOLO model.
 # The code has been modified to suit the needs of this project.
 import cv2
-import numpy as np
 import glob
 import random
+import numpy as np
 
 # Load YoloV3
 net = cv2.dnn.readNet("weights/yolov3_training_last.weights", "cfg/yolov3_testing.cfg")

@@ -1,5 +1,5 @@
-from cvlib.object_detection import YOLO
 import cv2
+from cvlib.object_detection import YOLO
 
 """
 PURPOSE: Simple mechanism to control the frequency of object detection and annotation, 
