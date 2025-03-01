@@ -165,13 +165,8 @@ print("Func make grid done!\n")
 def draw_grid(win, rows, width):
     gap = width // rows
     for i in range(rows):
+        pygame.draw.line(win, GREY, (i * gap, 0), (i * gap, width)) # vertical lines
         pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap)) # horizontal lines
-        for j in range(rows):
-            pygame.draw.line(win, GREY, (j * gap, 0), (j * gap, width)) # vertical lines
-    # # Alternative
-    # for i in range(rows):
-    #     pygame.draw.line(win, GREY, (i * gap, 0), (i * gap, width))
-    #     pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap))
 print("Func draw grid done!\n")
 
 def draw(win, grid, rows, width):
