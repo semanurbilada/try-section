@@ -88,8 +88,6 @@ class Spot:
 
     def __lt__(self, other):
         return False
-    
-
 
 # Heuristic Search func (distance)
 def h(p1, p2):
@@ -108,14 +106,13 @@ def algorithm(draw, grid, start, end):
     open_set = PriorityQueue()
     open_set.put((0, count, start))
     came_from = {}
+    open_set_hash = {start}
 
     g_score = {spot: float("inf") for row in grid for spot in row}
     g_score[start] = 0
 
     f_score = {spot: float("inf") for row in grid for spot in row}
     f_score[start] = h(start.get_pos(), end.get_pos())
-
-    open_set_hash = {start}
     
     while not open_set.empty():
         for event in pygame.event.get():
@@ -237,6 +234,11 @@ def main(win, width):
                     start = None
                     end = None
                     grid = make_grid(ROWS, width)
+
+                # ESC or Q for closing the window
+                if event.key == pygame.K_ESCAPE or event.key == pygame.K_q:
+                    run = False
+                    pygame.quit()
 
     pygame.quit()
 
