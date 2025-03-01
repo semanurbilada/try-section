@@ -95,9 +95,14 @@ class Spot:
 def h(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
-    p2 = (1,9)
     return abs(x1 - x2) + abs(y1 - y2)
 print("Func h done!\n")
+
+def reconstruct_path(came_from, current, draw):
+    while current in came_from:
+        current = came_from[current]
+        current.make_path()
+        draw()
 
 def algorithm(draw, grid, start, end):
     count = 0
@@ -122,6 +127,8 @@ def algorithm(draw, grid, start, end):
         open_set_hash.remove(current)
 
         if current == end: # make path
+            reconstruct_path(came_from, current, draw)
+            end.make_end()
             return True
         
         for neighbor in current.neighbors:
@@ -141,7 +148,6 @@ def algorithm(draw, grid, start, end):
 
         if current != start:
             current.make_closed()
-
     return False # return None
 
 def make_grid(rows, width):
