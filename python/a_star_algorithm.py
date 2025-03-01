@@ -196,22 +196,17 @@ print("Func get clicked pos done!\n")
 
 def main(win, width):
     ROWS = 50
-    grid = make_grid(ROWS, width)
-
     start = None
     end = None
-
     run = True
-    started = False
+    grid = make_grid(ROWS, width)
+
     while run:
         draw(win, grid, ROWS, width)
         print("Draw?!\n")
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-
-            if started:
-                continue
 
             if pygame.mouse.get_pressed()[0]: # left-clicked
                 pos = pygame.mouse.get_pos()
@@ -239,14 +234,19 @@ def main(win, width):
                 elif spot == end:
                     end = None
             
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE and not started:
+            if event.type == pygame.KEYDOWN: # run the algorithm
+                if event.key == pygame.K_SPACE and start and end:
                     for row in grid:
                         for spot in row:
                             spot.update_neighbors(grid)
                     
                     # pass an func to another func as an actual argument with lambda parameter
                     algorithm(lambda: draw(win, grid, ROWS, width), grid, start, end)
+                
+                if event.key == pygame.K_c: # reset everything
+                    start = None
+                    end = None
+                    grid = make_grid(ROWS, width)
 
     pygame.quit()
 
