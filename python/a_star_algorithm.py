@@ -89,14 +89,13 @@ class Spot:
     def __lt__(self, other):
         return False
     
-    print("Class done!\n")
+
 
 # Heuristic Search func (distance)
 def h(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
     return abs(x1 - x2) + abs(y1 - y2)
-print("Func h done!\n")
 
 def reconstruct_path(came_from, current, draw):
     while current in came_from:
@@ -160,14 +159,12 @@ def make_grid(rows, width):
             grid[i].append(spot)
 
     return grid
-print("Func make grid done!\n")
 
 def draw_grid(win, rows, width):
     gap = width // rows
     for i in range(rows):
         pygame.draw.line(win, GREY, (i * gap, 0), (i * gap, width)) # vertical lines
         pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap)) # horizontal lines
-print("Func draw grid done!\n")
 
 def draw(win, grid, rows, width):
     win.fill(WHITE)
@@ -178,7 +175,6 @@ def draw(win, grid, rows, width):
 
     draw_grid(win, rows, width)
     pygame.display.update()
-print("Func draw done!\n")
 
 def get_clicked_pos(pos, rows, width):
     gap = width // rows
@@ -187,7 +183,6 @@ def get_clicked_pos(pos, rows, width):
     row = y // gap
     col = x // gap
     return row, col
-print("Func get clicked pos done!\n")
 
 def main(win, width):
     ROWS = 50
@@ -198,7 +193,7 @@ def main(win, width):
 
     while run:
         draw(win, grid, ROWS, width)
-        print("Draw?!\n")
+    
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
